@@ -1,0 +1,11 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: wisecow-cert
+spec:
+  dnsNames:
+  - wisecow.local
+  secretName: wisecow-tls
+  issuerRef:
+    name: selfsigned-issuer
+    kind: ClusterIssuer
